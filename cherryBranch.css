@@ -1,5 +1,4 @@
 body {
-	/*WIDTH: 1440, Height: 828*/
 	background: #AEDDCD;
 	padding: 0;
 	margin: 0;
@@ -7,18 +6,10 @@ body {
 
 #treeCanvas {
 	position: absolute;
-	/*background: red;*/
-	/*top: 83px;*/	/*10%*/
-	width: 83.33%; /*33%*/
-	height: 71,4%;	/*50%%*/
-	/*left: 500px;*/
+	width: 83.33%;	/*Change this in order to change space that the branch takes*/
+	height: 71,4%;	/*Change this in order to change space that the branch takes*/
 	z-index: -2;
 	right: 0;
-}
-
-#branchDiv {
-/*	display: none; */
-	
 }
 
 #leavesCanvas {
