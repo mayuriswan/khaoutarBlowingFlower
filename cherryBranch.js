@@ -11,8 +11,6 @@
 	var numOfFlowers = 40;	/*Amount of flowers*/
 	
 	function init(){
-		innerHeight = window.innerHeight;
-		innerWidth = window.innerWidth;
 		initStages();
 		initBranch();	/*Remove this to hide the branch*/
 		initFlowers();	/*Remove this to hide the flowers*/
