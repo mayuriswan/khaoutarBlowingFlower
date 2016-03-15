@@ -1,8 +1,7 @@
 (function(){
 
 	var leavesStage, branchStage;
-	var leaves, branchLeaves;
-	var branchColor = '#3A2311';
+	var branchColor = "#3A2311";
 	var BackgroundColor = "#AEDDCD";
 	var leafColorDark = "#FFB7C5";
 	var leafColorLight = "#FFC5D0"
@@ -69,7 +68,6 @@
 	}
 
 	function initLeaves() {
-		var leaves = [];
 		for(var i = 0; i < numOfLeaves; i++){
 			var leaf = new createjs.Shape();
 			var x = (2*window.innerWidth)*Math.random() + 300;
@@ -82,7 +80,6 @@
 			leaf.graphics.beginFill(leafColorDark).drawRoundRectComplex(0,0,Math.random() * (max - min + 1) + min| 0,Math.random() * (max - min + 1) + min| 0,12,1,12,1);
 			leaf.x = x;
 			leaf.y = y;
-			leaves.push(leaf);
 			leavesStage.addChild(leaf);
 			createjs.Tween.get(leaf, {loop:true})
 				.wait(Math.random() * 10000)
