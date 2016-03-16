@@ -39,8 +39,8 @@
 			var flower = new createjs.Container();
 
 			for(var i = 0; i < 5; i++){
-				var petalW = Math.random() * (16 - 14 + 1) + 14| 0;
-				var petalH = Math.random() * (16 - 14 + 1) + 14| 0;
+				var petalW = randomInt(14,16);
+				var petalH = randomInt(14,16);
 				var petal = new createjs.Shape();
 
 				petal.regX = 0;
@@ -51,8 +51,8 @@
 				flower.addChild(petal);
 			}
 			var pistile = new createjs.Shape();
-			var pistileH = Math.random() * (8 - 6 + 1) + 6| 0;
-			var pistileW = Math.random() * (8 - 6 + 1) + 6| 0;
+			var pistileH = randomInt(6,8);
+			var pistileW = randomInt(6,8);
 			var xPos = Math.random() * 1000 + 100| 0;
 			var yPos = Math.random() * 300+ 200 | 0;
 
@@ -77,7 +77,7 @@
             var min = 12;
 			var falltime = Math.round(window.innerHeight * 7) + Math.random() * 5000;
 
-			leaf.graphics.beginFill(leafColorDark).drawRoundRectComplex(0,0,Math.random() * (max - min + 1) + min| 0,Math.random() * (max - min + 1) + min| 0,12,1,12,1);
+			leaf.graphics.beginFill(leafColorDark).drawRoundRectComplex(0,0,randomInt(min,max),randomInt(min,max),12,1,12,1);
 			leaf.x = x;
 			leaf.y = y;
 			leavesStage.addChild(leaf);
@@ -121,6 +121,10 @@
 		branch.cache(0,0,1200, 600);
 
 		return branch;
+	}
+
+	function randomInt(a, b) {
+    	return Math.floor(Math.random()*(b-a+1)+a);
 	}
 
 	window.onload = function() { init() };
